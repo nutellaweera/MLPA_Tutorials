@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_breast_cancer
-from sklearn.metrics import plot_confusion_matrix
+from sklearn.metrics import f1_score, plot_confusion_matrix
 
 def gen_plot(train_scores, test_scores):
     plt.plot(range(1,11), train_scores, label="training accuracy")
@@ -18,6 +18,10 @@ def gen_plot(train_scores, test_scores):
 def gen_confusion_matrix(clf, x_test, y_test):
     plot_confusion_matrix(clf, x_test, y_test, cmap=plt.cm.Blues)
     plt.show()
+
+# f1 score = 2 * (precision * recall) / (precision + recall)
+def gen_f1_score(y_true, y_pred):
+    return f1_score(y_true, y_pred)
 
 def load_from_txt():
     df = pd.read_csv('Week4/breast_cancer_data.txt')
@@ -47,11 +51,6 @@ def load_from_txt():
     # Test accuracy of training and testing for different Ks; most accurate when K=5
     # Evaluate with id included; test and training scores are worse because the parameter isn't correlated
     # Other parameters; default distance (metric) is Minkowski, changing to Euclidean or Manhattan affects K
-
-    data = np.array([4,3,3,2,1,2,1,1,2])
-    prediction = clf.predict(data.reshape(1, -1))
-    print(prediction)
-
     train_acc, test_acc = [],[]
 
     for i in range(1,11):
@@ -89,7 +88,6 @@ def load_from_sklearn():
     # TP 48 | FP 5
     # FN 4  | TN 86
     # high accuracy because true classifications are much larger values than FN and FP
-
 
 #load_from_txt()
 load_from_sklearn()
