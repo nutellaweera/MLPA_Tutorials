@@ -30,6 +30,9 @@ y_pred = lr.predict(x_test)
 print(f'Coefficient of determination r squared: {r2_score(y_test, y_pred)}')
 #0.3172099449537781
 
+# low r^2 - independent variable does not explain variance of the dependent variable
+# could be a good model but likely not to be
+
 
 # plt.scatter(x_test, y_test, color='black')
 # plt.plot(x_test, y_pred, color='blue', linewidth=3)
