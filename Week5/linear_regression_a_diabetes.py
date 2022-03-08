@@ -12,9 +12,10 @@ print(diabetes_ds.keys())
 
 data = pd.DataFrame(diabetes_ds.data, columns=[diabetes_ds.feature_names])
 target = pd.DataFrame(diabetes_ds.target)
+
+# limit to using only one feature
 x = diabetes_ds.data[:, np.newaxis, 2] # np.newaxis makes it a 2d array (?)
 y = np.array(target)
-
 
 x_train, x_test, y_train, y_test = train_test_split(x,y,random_state=42)
 lr = LinearRegression().fit(x_train, y_train)
