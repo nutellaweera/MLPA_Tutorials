@@ -2,7 +2,7 @@
 Task tracking for MLPA tutorials.
 
 ### Week 4
-KNN
+[KNN](https://github.com/nutellaweera/MLPA_Tutorials/tree/main/Week4)
 - [x] Task A - Read data and make predictions pn the wisconsin-breast-cancer dataset using KNN
 - [x] Task B - Change K and observe differences
 - [x] Task C - KNN using data from sklearn
@@ -10,7 +10,7 @@ KNN
 
 
 ### Week 5
-Linear regression.
+[Linear regression](https://github.com/nutellaweera/MLPA_Tutorials/tree/main/Week5)
 - [x] Task A - Simple linear regression
   - [x] Load diabetes ds, plot BMI and y
   - [x] Execute lr given on slides
