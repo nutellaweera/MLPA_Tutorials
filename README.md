@@ -34,7 +34,9 @@ Task tracking for MLPA tutorials.
   - [x] Plot feature importances
 - [x] Task 2 - DT regressor
   - [x] Apply DT regressor on sklearn diabetes ds
-- [ ] Task 3 - Visualizing decision boundaries
+- [x] Task 3 - Visualizing decision boundaries
+  - [x] make_blobs scatterplot
+  - [x] make_blobs classifier visualization
 - [ ] Task 4 - Random forests
   - [ ] Classify handwritten numbers using DT+RF
   - [ ] Evaulate difference in accuracy between DT and RF
